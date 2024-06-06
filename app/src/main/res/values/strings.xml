@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">NexList</string>
+    <string name="buttonDefault">Default caption</string>
+    <string name="checkBoxDefault">Empty item</string>
+    <string name="button3">Delete table</string>
+    <string name="button2">Create a new table</string>
+    <string name="button">Add a note</string>
+    <string name="EditText3">Description of the task</string>
+    <string name="EditText2">date of completion</string>
+    <string name="EditText">Task name</string>
+    <string name="button5">+</string>
+    <string name="buttonZam">Create a new note</string>
+    <string name="EditText1">Note title</string>
+    <string name="EditTexT">Description of the note</string>
+    <string name="but5">+</string>
+    <string name="TextView">Active</string>
+    <string name="TextView1">The note</string>
+    <string name="TextView2">Done</string>
+    <string name="name">Name</string>
+    <string name="name1">Name</string>
+    <string name="name2">Name</string>
+    <string name="editTextDatre">date of completion</string>
+    <string name="close">Close</string>
+    <string name="complete">Done</string>
+    <string name="edit">Change</string>
+</resources>
