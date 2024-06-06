@@ -30,8 +30,8 @@ class Notification(val context : Context) {
     fun sendNotification(channelID: String, notificationId: Int) {
         val builder = NotificationCompat.Builder(context, channelID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle("Какой-то заголовок")
-            .setContentText("Какой-то текст")
+            .setContentTitle("Notification")
+            .setContentText("You have a new notification")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
         with(NotificationManagerCompat.from(context)) {
             notify(notificationId, builder.build())

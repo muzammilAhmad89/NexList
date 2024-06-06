@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextText"
-            android:layout_width="397dp"
-            android:layout_height="124dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
@@ -30,11 +30,12 @@
             android:hint="@string/EditText1"
             android:inputType="textMultiLine"
             android:minHeight="48dp"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor"
+            />
 
         <EditText
             android:id="@+id/editTextDate"
-            android:layout_width="397dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
@@ -50,7 +51,7 @@
         <EditText
             android:id="@+id/editTextText3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
@@ -59,7 +60,9 @@
             android:hint="@string/EditTexT"
             android:inputType="textMultiLine"
             android:minHeight="48dp"
-            tools:ignore="LabelFor" />
+            tools:ignore="LabelFor"
+            android:maxLines="10"
+            />
 
     </LinearLayout>
 
@@ -71,26 +74,39 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
         tools:ignore="NotSibling">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonClose"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="195dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple"
-            android:text="@string/close"
+            android:backgroundTint="@color/secondary"
+            android:text="Cancel"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:cornerRadius="7dp"
+            app:icon="@drawable/icon_cross"
+            app:iconTint="@color/white"
+            />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCreate"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple"
+            android:backgroundTint="@color/secondaryVariant"
             android:text="@string/buttonZam"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:cornerRadius="7dp"
+            app:icon="@drawable/icon_next"
+            app:iconTint="@color/white"
+            app:iconGravity="end"
+            app:iconSize="20dp"
+            />
 
     </LinearLayout>
 

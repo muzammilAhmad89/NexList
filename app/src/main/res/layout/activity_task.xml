@@ -19,7 +19,7 @@
 
         <EditText
             android:id="@+id/editTextText4"
-            android:layout_width="397dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
@@ -33,7 +33,7 @@
 
         <EditText
             android:id="@+id/editTextText5"
-            android:layout_width="397dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
@@ -45,16 +45,16 @@
             android:text="@string/name1"
             tools:ignore="LabelFor" />
 
-        <CheckBox
+        <!--<CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Done" />
-
+-->
         <EditText
             android:id="@+id/editTextText6"
-            android:layout_width="397dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
@@ -69,29 +69,41 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCloseTask"
-            android:backgroundTint="#656565"
-            android:layout_width="194dp"
+            android:backgroundTint="@color/secondary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/close"
-            android:textColor="#F3E5F5"/>
+            android:textColor="@color/white"
+            app:cornerRadius="7dp"
+            android:layout_margin="5dp"
+            app:icon="@drawable/icon_cross"
+            app:iconTint="@color/white"
+            />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#656565"
+            android:layout_weight="2"
+            android:backgroundTint="@color/secondaryVariant"
             android:text="@string/edit"
-            android:textColor="#F3E5F5" />
+            android:textColor="@color/white"
+            app:cornerRadius="7dp"
+            android:layout_margin="5dp"
+            app:icon="@drawable/icon_change"
+            app:iconGravity="end"
+            app:iconTint="@color/white"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

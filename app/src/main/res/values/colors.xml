@@ -5,4 +5,8 @@
     <color name="purple">#494A7B</color>
     <color name="red">#A85762</color>
     <color name="yellow">#ABAF5B</color>
+    <color name="primary">#3B0404</color>
+    <color name="primaryVariant">#DEB3AD</color>
+    <color name="secondary">#DE847B</color>
+    <color name="secondaryVariant">#B95C50</color>
 </resources>

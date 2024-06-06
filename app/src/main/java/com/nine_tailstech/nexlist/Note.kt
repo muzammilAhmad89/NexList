@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.todo_list.R
 import java.util.Calendar
@@ -47,11 +48,20 @@ class Note : AppCompatActivity() {
             val dateAcc = dateEditText.text.toString()
             val descriptor = dateEditText2.text.toString()
             val name = dateEditText3.text.toString()
-            myDatabase.addTask(name = name , description = descriptor , dateAcc = dateAcc, status = true/*статус еще не готов*/)
-            super.onResume()
-            db.close()
-            this.recreate();
-            finish()
+
+            val yes = areStringsNotNull(name)
+
+            if (!yes) {
+                Toast.makeText(this, "Enter Note Title", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                myDatabase.addTask(name = name , description = descriptor , dateAcc = dateAcc, status = true/*статус еще не готов*/)
+                super.onResume()
+                db.close()
+                this.recreate();
+                finish()
+            }
+
         }
 
         val but1 = findViewById<Button>(R.id.buttonClose)
@@ -61,5 +71,13 @@ class Note : AppCompatActivity() {
             finish()//добавил закрытие layout
             onPause()
         }
+    }
+    fun areStringsNotNull(vararg strings: String?): Boolean {
+        for (str in strings) {
+            if (str == null || str.isEmpty()) {
+                return false
+            }
+        }
+        return true
     }
 }
