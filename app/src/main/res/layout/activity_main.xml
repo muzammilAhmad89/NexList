@@ -38,61 +38,69 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/ll2"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        app:cardElevation="15dp"
         >
-        <!--<Switch
-            android:id="@+id/Active"
-            android:layout_width="50dp"
-            android:layout_height="21dp"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            >
+            <!--<Switch
+                android:id="@+id/Active"
+                android:layout_width="50dp"
+                android:layout_height="21dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/TextView"
-            android:layout_toRightOf="@id/Active"
-            android:layout_centerVertical="true"
-            />
--->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button5"
-            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="35dp"
-            android:backgroundTint="@color/primary"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:text="+"
-            android:textColor="@color/primaryVariant"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TextView"
+                android:layout_toRightOf="@id/Active"
+                android:layout_centerVertical="true"
+                />
+    -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button5"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/primary"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="+"
+                android:textColor="@color/primaryVariant"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
 
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Set a Notification"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/primary"
-            android:layout_centerVertical="true"
-            />
-    </RelativeLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set a Notification"
+                android:textColor="@color/primary"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/white"
+                android:layout_centerVertical="true"
+                app:icon="@drawable/icon_notification"
+                app:iconTint="@color/primary"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

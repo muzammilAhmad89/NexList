@@ -24,7 +24,7 @@ class EventsAdapter(val db : DataBase) : RecyclerView.Adapter<EventsAdapter.View
         return db.getCount()
     }
     override fun onBindViewHolder(holder: EventsAdapter.ViewHolder, position: Int) {
-        val task = db.getTaskById(position + 1)
+        val task = db.getTaskById(position )
         val button = holder.eventButton
         //if (button == null){button.text = "Название заметки"} else { button.text = task?.name}
         button.text = task?.name
@@ -36,7 +36,7 @@ class EventsAdapter(val db : DataBase) : RecyclerView.Adapter<EventsAdapter.View
 
         val butt = holder.but1
         butt.setOnClickListener{
-            db.deleteTaskById(position + 1)
+            db.deleteTaskById(position )
             notifyDataSetChanged()
         }
     }
